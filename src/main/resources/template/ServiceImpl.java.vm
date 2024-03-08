@@ -1,0 +1,25 @@
+package ${package}.${moduleName}.service.impl;
+
+import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import ${mainPath}.common.PageReq;
+import ${mainPath}.common.PageResp;
+import ${mainPath}.utils.PageUtil;
+
+import ${mainPath}.dao.AccountPlayerDao;
+import ${mainPath}.entity.AccountPlayer;
+import ${mainPath}.service.AccountPlayerService;
+
+
+@Service("${classname}Service")
+public class ${className}ServiceImpl extends ServiceImpl<${className}Dao, ${className}> implements ${className}Service {
+
+    @Override
+    public PageResp pageQuery(PageReq pageReq) {
+        Page<${className}> page = PageUtil.getPage(pageReq);
+        this.page(page, null);
+        return PageUtil.getPageResp(page);
+    }
+
+}

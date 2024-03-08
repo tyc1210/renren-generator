@@ -1,0 +1,20 @@
+package ${package}.${moduleName}.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import ${package}.${moduleName}.entity.${className};
+import ${mainPath}.common.PageReq;
+import ${mainPath}.common.PageResp;
+
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+public interface ${className}Service extends IService<${className}> {
+
+    PageResp pageQuery(PageReq pageReq);
+}
+
